@@ -12,7 +12,7 @@ When you are viewing an AI tab, you hear one ding at completion. If you are on a
 1. Download files into one folder
 2. Open Firefox `about:debugging#/runtime/this-firefox`
 3. Click "Load Temporary Add-on"
-4. Select manifest
+4. Select manifest.json
 5. Refresh any AI model tabs.
 
 
