@@ -23,3 +23,5 @@ When you are viewing an AI tab, you hear one ding at completion. If you are on a
 - `popup.html`, `popup.css`, `popup.js`
 - `ding.wav`, `chimes/`, `icons/`
 - `README.md`
+
+Further implementation may include buttplug integration if demand is high. 
