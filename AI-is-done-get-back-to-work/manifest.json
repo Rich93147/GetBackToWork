@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "AI is done get back to work",
+  "version": "0.4.1",
+  "description": "Dings when an AI finishes responding, announces its name in background tabs, and highlights completed tabs.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_icon": "icons/icon-48.png",
+    "default_title": "AI is done get back to work",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "detector.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ai-is-done-get-back-to-work@local.extension",
+      "strict_min_version": "128.0"
+    }
+  }
+}
